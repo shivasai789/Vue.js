@@ -10,7 +10,7 @@ export default {
     };
 
     const response = await fetch(
-      `https://vue-coach-project-40264-default-rtdb.asia-southeast1.firebasedatabase.app/coaches/${userId}.json?auth=${context.rootGetters.token}`,
+      `https://vue-coach-project-default-rtdb.asia-southeast1.firebasedatabase.app/coaches/${userId}.json?auth=${context.rootGetters.token}`,
       {
         method: 'PUT',
         body: JSON.stringify(coachData),
@@ -34,7 +34,7 @@ export default {
     }
 
     const response = await fetch(
-      `https://vue-coach-project-40264-default-rtdb.asia-southeast1.firebasedatabase.app/coaches.json`
+      `https://vue-coach-project-default-rtdb.asia-southeast1.firebasedatabase.app/coaches.json`
     );
     const responseData = await response.json();
 

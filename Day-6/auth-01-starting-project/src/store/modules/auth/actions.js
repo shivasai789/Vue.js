@@ -6,7 +6,7 @@ export default {
   async login(context, payload) {
     try {
       const { data } = await axios.post(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCEZF4DDTtTYcmsyYlOciksW1VhMVRV9s8',
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[APIKEY]',
         {
           email: payload.email,
           password: payload.password,
@@ -39,7 +39,7 @@ export default {
   async signup(context, payload) {
     try {
       const { data } = await axios.post(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyCEZF4DDTtTYcmsyYlOciksW1VhMVRV9s8',
+        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=[APIKEY]',
         {
           email: payload.email,
           password: payload.password,

@@ -5,7 +5,7 @@ export default {
       message: payload.message,
     };
     const response = await fetch(
-      `https://vue-coach-project-40264-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${payload.coachId}.json`,
+      `https://vue-coach-project-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${payload.coachId}.json`,
       {
         method: 'POST',
         body: JSON.stringify(newRequest),
@@ -29,7 +29,7 @@ export default {
   async fetchRequests(context) {
     const coachId = context.rootGetters.userId;
     const response = await fetch(
-      `https://vue-coach-project-40264-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${coachId}.json?auth=${context.rootGetters.token}`
+      `https://vue-coach-project-default-rtdb.asia-southeast1.firebasedatabase.app/requests/${coachId}.json?auth=${context.rootGetters.token}`
     );
     const responseData = await response.json();
 
